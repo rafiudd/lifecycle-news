@@ -93,7 +93,7 @@ onChangehandler = (e) => {
                 
                 <Container fluid="md" className='mt-3 ' >
                 <Row md={4}>
-                    {this.news.map((m, i) => 
+                    {this.state.data.map((m, i) => 
                     <Col className='my-2 ' >
                         <Card style={{ width: '15rem' }}>
                         <Card.Img variant="top" src={m.urlToImage} />
