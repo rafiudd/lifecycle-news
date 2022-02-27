@@ -34,7 +34,7 @@ news = (val) => {
     .then((response) => response.json())
     .then((response) =>{
         this.setState({
-            data : response.articles,
+            data : response.articles
             
            
         })
