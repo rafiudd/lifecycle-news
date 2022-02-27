@@ -30,7 +30,7 @@ export default class Items extends React.Component {
 
 }
 news = (val) => {
-    fetch(`https://newsapi.org/v2/everything?apiKey=f82a8ab1469f45de9c35842645794e46&q=${val}`)
+    fetch(`https://newsapi.org/v2/everything?apiKey=f82a8ab1469f45de9c35842645794e46`)
     .then((response) => response.json())
     .then((response) =>{
         this.setState({
