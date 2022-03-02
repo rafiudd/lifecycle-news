@@ -30,11 +30,11 @@ export default class Items extends React.Component {
 
 }
 news = (val) => {
-    fetch(`https://newsapi.org/v2/top-headlines?country=id&apiKey=f82a8ab1469f45de9c35842645794e46&q=${val}`)
+    fetch(`https://newsapi.org/v2/everything?apiKey=f82a8ab1469f45de9c35842645794e46`)
     .then((response) => response.json())
     .then((response) =>{
         this.setState({
-            data : response.articles,
+            data : response.articles
             
            
         })
@@ -89,7 +89,7 @@ onChangehandler = (e) => {
                 <Container fluid="md" className='mt-3 ' >
                 <Row md={4}>
                     {this.state.data.map((m, i) => 
-                    <Col className='my-2 ' key={i}>
+                    <Col className='my-2 '  key={i}>
                         <Card style={{ width: '15rem' }}>
                         <Card.Img variant="top" src={m.urlToImage} />
                         <Card.Body>
