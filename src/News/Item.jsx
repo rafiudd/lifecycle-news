@@ -82,12 +82,7 @@ onChangehandler = (e) => {
                         </Col> 
                                          
                     </Row>
-                    <Row>
-                        <Col md={10}>
-                  
-                 
-                        </Col>               
-                    </Row>
+
                 </Container>
 
                 

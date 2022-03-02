@@ -1,10 +1,12 @@
 
-import Items from './News/Item';
+
+import Berita from './newsHooks';
+
 
 function App() {
   return (
     <div className="App">
-      <Items/>
+      <Berita />
     </div>
   );
 }
