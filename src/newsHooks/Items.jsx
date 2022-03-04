@@ -9,7 +9,7 @@ const ItemNews = () => {
     let [filter,setfilter] = useState('');
 
     useEffect(() => {
-        fetch (`https://newsapi.org/v2/top-headlines?country=id&apiKey=f82a8ab1469f45de9c35842645794e46&q=${filter}`)
+        fetch (`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=id&apiKey=f82a8ab1469f45de9c35842645794e46&q=${filter}`)
         .then(response => response.json())
         .then(response => {
             
