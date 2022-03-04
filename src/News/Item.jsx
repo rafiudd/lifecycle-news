@@ -30,7 +30,15 @@ export default class Items extends React.Component {
 
 }
 news = (val) => {
-    fetch(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=id&apiKey=f82a8ab1469f45de9c35842645794e46&q=`)
+    const params = { 
+        method: 'GET', 
+        headers: new Headers({
+            'Access-Control-Allow-Origin': '*', 
+            'x-requested-with': '',
+            'x-requested-by': ''
+        })
+    };
+    fetch (`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=id&apiKey=f82a8ab1469f45de9c35842645794e46&q=${filter}`, params)
     .then((response) => response.json())
     .then((response) =>{
         this.setState({
